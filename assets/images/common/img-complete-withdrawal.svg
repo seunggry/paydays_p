@@ -1,0 +1,39 @@
+<svg width="208" height="136" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="b" d="M0 0h90.079v57.183H0z"/>
+        <path id="d" d="M0 0h90.079v57.183H0z"/>
+        <path id="f" d="M0 0h84.346v46.563H0z"/>
+        <linearGradient x1="26.06%" y1="74.719%" x2="27.878%" y2="30.139%" id="a">
+            <stop stop-color="#FFBF8A" offset="0%"/>
+            <stop stop-color="#FFC99C" offset="0%"/>
+            <stop stop-color="#FFD06B" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="2.617%" y1="34.762%" x2="77.736%" y2="65.238%" id="g">
+            <stop stop-color="#F0792B" offset="0%"/>
+            <stop stop-color="#FF5F33" offset="100%"/>
+        </linearGradient>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path d="M112.973 127.23c-58.738 5.713-97.887-21.337-100.668-49.756-2.78-28.42 12.447-92.792 87.207-60.737 74.759 32.054 93.512 15.798 96.293 44.217 2.78 28.42-24.094 60.565-82.832 66.277z" fill-opacity=".3" fill="url(#a)"/>
+        <g transform="translate(64.921 46)">
+            <mask id="c" fill="#fff">
+                <use xlink:href="#b"/>
+            </mask>
+            <path d="m70.25 57.183 19.522-47.049c.891-2.147-.226-3.887-2.495-3.887H83.35c-1.603 0-2.695-.882-2.799-2.259l-.13-1.73C80.317.882 79.222 0 77.62 0H58.955c-1.455 0-3.098.726-4.321 1.91l-1.516 1.466c-1.223 1.184-2.865 1.91-4.317 1.91H25.03c-2.27 0-4.811 1.74-5.677 3.888L0 57.184h70.25z" fill="#FF725E" mask="url(#c)"/>
+        </g>
+        <g transform="translate(64.921 46)">
+            <mask id="e" fill="#fff">
+                <use xlink:href="#d"/>
+            </mask>
+            <path d="m70.25 57.183 19.522-47.049c.891-2.147-.226-3.887-2.495-3.887H83.35c-1.603 0-2.695-.882-2.799-2.259l-.13-1.73C80.317.882 79.222 0 77.62 0H58.955c-1.455 0-3.098.726-4.321 1.91l-1.516 1.466c-1.223 1.184-2.865 1.91-4.317 1.91H25.03c-2.27 0-4.811 1.74-5.677 3.888L0 57.184h70.25z" fill="#4E4E4F" mask="url(#e)"/>
+        </g>
+        <g transform="translate(51 57.437)">
+            <mask id="h" fill="#fff">
+                <use xlink:href="#f"/>
+            </mask>
+            <path d="M84.346 46.543 69.625 3.024C69.01 1.212 67.37 0 65.53 0H2.951C.935 0-.487 2.067.156 4.065L13.85 46.564l70.497-.021z" fill="url(#g)" mask="url(#h)"/>
+        </g>
+        <ellipse stroke="#FFF" stroke-width="2.5" stroke-linecap="round" cx="90.669" cy="81.31" rx="11.027" ry="11"/>
+        <path stroke="#FFF" stroke-width="2.5" stroke-linecap="round" d="m87.306 77.981 6.819 7M94.124 77.981l-6.819 7"/>
+    </g>
+</svg>

@@ -1,0 +1,40 @@
+<svg width="208" height="136" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="a" d="M0 0h208v136H0z"/>
+        <path id="d" d="M0 0h63v61H0z"/>
+        <path d="M37 55.271c0-3.283-3.131-5.865-6.687-5.152-2.092.419-3.776 2.049-4.198 4.056-.527 2.511.81 4.786 2.92 5.803.345.165.532.53.478.896l-1.761 11.87a.23.23 0 0 0 .234.256h7.242c.143 0 .254-.121.233-.257L33.686 60.78a.848.848 0 0 1 .441-.879c1.71-.893 2.873-2.63 2.873-4.629" id="g"/>
+        <linearGradient x1="26.06%" y1="74.719%" x2="27.878%" y2="30.139%" id="b">
+            <stop stop-color="#FFBF8A" offset="0%"/>
+            <stop stop-color="#FFC99C" offset="0%"/>
+            <stop stop-color="#FFD06B" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="0%" y1="27.607%" x2="100%" y2="86.73%" id="e">
+            <stop stop-color="#F0792B" offset="0%"/>
+            <stop stop-color="#FF5F33" offset="100%"/>
+        </linearGradient>
+        <filter x="-4.5%" y="-2.2%" width="109.1%" height="104.3%" filterUnits="objectBoundingBox" id="h">
+            <feOffset dx="1" dy="1" in="SourceAlpha" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+            <feColorMatrix values="0 0 0 0 0.305882353 0 0 0 0 0.305882353 0 0 0 0 0.309803922 0 0 0 1 0" in="shadowInnerInner1"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="c" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path d="M112.973 127.23c-58.738 5.713-97.887-21.337-100.668-49.756-2.78-28.42 12.447-92.792 87.207-60.737 74.759 32.054 93.512 15.798 96.293 44.217 2.78 28.42-24.094 60.565-82.832 66.277z" fill-opacity=".3" fill="url(#b)" mask="url(#c)"/>
+        </g>
+        <path d="M116.934 46.835c0 8.807-7.134 15.946-15.934 15.946-8.8 0-15.935-7.14-15.935-15.946V36.576C85.065 27.77 92.2 20.63 101 20.63c8.8 0 15.934 7.14 15.934 15.947v10.259zM101 15c-12.15 0-22 9.856-22 22.015v9.97C79 59.144 88.85 69 101 69s22-9.856 22-22.015v-9.97C123 24.856 113.15 15 101 15z" fill="#4E4E4F"/>
+        <g transform="translate(70 46)">
+            <mask id="f" fill="#fff">
+                <use xlink:href="#d"/>
+            </mask>
+            <path d="M38.277 60.592a306.16 306.16 0 0 0 15.731-2.3c1.171-.206 2.323-.508 3.417-.971 5.992-2.534 5.569-6.669 5.569-6.669V13.576c-.021-5.324-3.763-9.898-8.975-11.108C44.66.298 31.5 0 31.5 0S18.342.298 8.98 2.468C3.77 3.678.028 8.252.007 13.576v37.076s-.423 4.135 5.569 6.669c1.094.463 2.246.765 3.417.97 2.497.44 8.283 1.401 15.731 2.3 4.5.546 9.055.546 13.554 0" fill="url(#e)" mask="url(#f)"/>
+        </g>
+        <g transform="translate(70 15)">
+            <use fill="#FFF" xlink:href="#g"/>
+            <use fill="#000" filter="url(#h)" xlink:href="#g"/>
+        </g>
+    </g>
+</svg>

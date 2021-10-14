@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+@import "import/reset";
+@import "import/base";
+@import "import/font";
+
+
+/* Root Font Style */
+:root{
+    @include font('regular', 14px, 20/14, #000);
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+/* Form */
+legend{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
+select, textarea, input, label{vertical-align:middle;}
+select, textarea, input{@include vendor-prefix(appearance, none);}
+input[type=search]{-webkit-appearance:textfield}
+input[type=checkbox], input[type=radio]{box-sizing:border-box;padding:0;margin:0;}
+button::-moz-focus-inner, input::-moz-focus-inner{border:0;padding:0}
+select:-moz-focusring{color:transparent;text-shadow:0 0 0 #000}
+select::-ms-expand{display:none}
+
+/* Table */
+table{border-collapse:collapse;}
+caption{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
+
+/* ClearFix */
+.clearfix,
+.clearfix:after{content:''; display: block; clear: both;}
+
+/* Hidden Text */
+.hiddenText{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
+

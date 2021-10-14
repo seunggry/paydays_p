@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+//단위 제거
+@function remove-unit($value) {
+  @return ($value / ($value * 0 + 1));
+}
+
+// 소수점 첫째 자리에서 반올림
+@function toFixed-first($num) {
+    $calc-num: ceil($num * 10);
+    $result: $calc-num /10;
+
+    @return $result;
+}
+
+// 소수점 둘째 자리에서 반올림
+@function toFixed-second($num) {
+  $calc-num: ceil($num * 100);
+  $result: $calc-num /100;
+
+  @return $result;
+}
+
+//rem 계산
+@function px-to-rem($unit-parm) {
+  $changed-unit: $unit-parm / $root-px;
+  @return $changed-unit;
+}
+
+@function calc-unit($unit-px){
+  $unit-parm: remove-unit($unit-px);
+  $changed-unit: px-to-rem($unit-parm);
+  $changed-rem: toFixed-second($changed-unit) + rem;
+
+  @return $changed-rem;
+}
+

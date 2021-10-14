@@ -1,0 +1,50 @@
+<svg width="204" height="226" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="a" d="m101.32 102 101.476-51-58.024-51H51.298L0 54.793V102h42.617z"/>
+        <path d="M100.901 0C45.063 0-.204 45.667-.204 102h36.842c0-35.806 28.772-64.832 64.263-64.832 35.492 0 64.264 29.026 64.264 64.832h36.841c0-56.333-45.266-102-101.105-102" id="d"/>
+        <linearGradient x1="0%" y1="91.389%" x2="100%" y2="91.389%" id="e">
+            <stop stop-color="#FF832E" offset="0%"/>
+            <stop stop-color="#FFB95B" offset="100%"/>
+        </linearGradient>
+        <filter x="-5.7%" y="-9.3%" width="111.4%" height="122.5%" filterUnits="objectBoundingBox" id="c">
+            <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0755922544 0" in="shadowBlurOuter1"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <path d="m50 83-10.54.983 3.88 3.887-8.973 8.99A1.255 1.255 0 0 0 35.25 99c.32 0 .64-.122.885-.367l8.973-8.99 3.91 3.918L50 83z" fill="#E0E0E0"/>
+        <path fill="#F2F2F2" d="M161 35h-33.553l6.642 6.529-30.642 30.958 16.347 18.073 32.318-31.318L161 67.978z"/>
+        <path fill="#E5E5E5" d="m128.316 67.764-10.25-10.259-14.619 15.04 16 18.015.657-.648z"/>
+        <path fill="#EEE" d="M98.131 99 80 81.053l30.895-30.58 18.131 17.946z"/>
+        <path d="m189 71-10.54.983 3.88 3.887-8.973 8.99a1.256 1.256 0 0 0 .884 2.14c.32 0 .64-.122.885-.367l8.973-8.99 3.91 3.918L189 71z" fill="#F5F5F5"/>
+        <path d="m184 96-10.54.984 3.879 3.886-8.972 8.99a1.255 1.255 0 0 0 .884 2.14c.32 0 .64-.122.885-.367l8.973-8.99 3.91 3.918L184 96z" fill="#E0E0E0"/>
+        <path d="m124 0-10.54.983 3.88 3.887-8.973 8.99a1.256 1.256 0 0 0 .884 2.14c.32 0 .64-.122.885-.367l8.973-8.99 3.91 3.918L124 0z" fill="#EAEAEA"/>
+        <g>
+            <path d="M101.523 123C45.684 123 .418 168.667.418 225h36.841c0-35.806 28.772-64.832 64.264-64.832 35.491 0 64.263 29.026 64.263 64.832h36.842c0-56.333-45.267-102-101.105-102" fill="#EFF0F5"/>
+            <g transform="translate(.621 123)">
+                <mask id="b" fill="#fff">
+                    <use xlink:href="#a"/>
+                </mask>
+                <use fill-opacity="0" fill="#D8D8D8" xlink:href="#a"/>
+                <g mask="url(#b)">
+                    <use fill="#000" filter="url(#c)" xlink:href="#d"/>
+                    <use fill="url(#e)" xlink:href="#d"/>
+                </g>
+            </g>
+            <path stroke="#686868" d="m154.582 198.446 41.779-21.074"/>
+            <g fill="#000" font-family="SpoqaHanSansNeo-Bold, Spoqa Han Sans Neo" font-weight="bold">
+                <text font-size="26" transform="translate(66.418 198)">
+                            <tspan x="1.756" y="25">986</tspan>
+                        </text>
+                <text font-size="22" transform="translate(66.418 198)">
+                            <tspan x="51.38" y="23">점</tspan>
+                        </text>
+            </g>
+            <text font-family="SpoqaHanSansNeo-Regular, Spoqa Han Sans Neo" font-size="12" letter-spacing="-.6" fill="#535353" transform="translate(.418 123)">
+                        <tspan x="78.338" y="69">상위 </tspan>
+                        <tspan x="101.306" y="69">10%</tspan>
+                    </text>
+        </g>
+    </g>
+</svg>

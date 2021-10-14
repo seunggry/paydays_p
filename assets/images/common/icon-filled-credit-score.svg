@@ -1,0 +1,43 @@
+<svg width="48" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="a" d="M0 0h32.764v17.014H0z"/>
+        <path id="c" d="M0 0h12.158v17.433H0z"/>
+        <path id="e" d="M0 0h10.566v5.485H0z"/>
+        <path id="g" d="M0 0h16.787v12.626H0z"/>
+        <path id="i" d="M0 0h12.158v17.434H0z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(7.359 7.642)">
+            <mask id="b" fill="#fff">
+                <use xlink:href="#a"/>
+            </mask>
+            <path d="M0 17.015c0-4.7 1.834-8.952 4.8-12.03C7.763 1.906 11.86 0 16.382 0c4.525 0 8.62 1.906 11.586 4.985 2.964 3.078 4.796 7.33 4.796 12.03H0z" fill="#E3F2FC" mask="url(#b)"/>
+        </g>
+        <g transform="translate(0 7.223)">
+            <mask id="d" fill="#fff">
+                <use xlink:href="#c"/>
+            </mask>
+            <path d="M12.158 5.403c-2.964 3.078-4.8 7.333-4.8 12.03H0C0 10.626 2.656 4.46 6.955 0l5.203 5.403z" fill="#E9555F" mask="url(#d)"/>
+        </g>
+        <g transform="translate(18.458 19.17)">
+            <mask id="f" fill="#fff">
+                <use xlink:href="#e"/>
+            </mask>
+            <path d="M10.566 5.485C10.566 2.455 8.202 0 5.284 0 2.368 0 0 2.455 0 5.485h10.566z" fill="#535F80" mask="url(#f)"/>
+        </g>
+        <path d="M23.734 23.947c-.696-.385-.962-1.285-.587-2.01l4.103-7.992c.372-.723 1.24-.997 1.938-.612.696.388.96 1.287.587 2.012l-4.104 7.99c-.373.726-1.239 1-1.937.612" fill="#535F80"/>
+        <g transform="translate(23.742)">
+            <mask id="h" fill="#fff">
+                <use xlink:href="#g"/>
+            </mask>
+            <path d="M11.584 12.626C8.62 9.547 4.525 7.643 0 7.643V0c6.555 0 12.49 2.76 16.787 7.223l-5.203 5.403z" fill="#EDCA41" mask="url(#h)"/>
+        </g>
+        <path d="M23.741 7.642c-4.523 0-8.62 1.905-11.582 4.983L6.954 7.222c4.296-4.46 10.23-7.22 16.787-7.22v7.64z" fill="#FAEE77"/>
+        <g transform="translate(35.325 7.222)">
+            <mask id="j" fill="#fff">
+                <use xlink:href="#i"/>
+            </mask>
+            <path d="M4.798 17.435c0-4.7-1.832-8.952-4.798-12.03L5.205 0c4.296 4.461 6.953 10.626 6.953 17.435h-7.36z" fill="#7BBF87" mask="url(#j)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="keywords" content="">
+<meta name="description" content="">
+
+<title>PayDays</title>
+<link rel="stylesheet" href="../../assets/css/common.css">
+<script src="../../assets/js/lib/jquery-3.6.0.js"></script>
+<script src="../../assets/js/common.js"></script>
+</head>
+
+<body>
+<div id="wrap">
+    <!-- Header -->
+    <header>
+        <h1><em>PayDays</em></h1>
+    </header>
+    <!-- // Header -->
+
+    <!-- Contents -->
+    <div class="contents">
+
+        <span class="btn-group">
+            <button type="button" class="btn-type">취소</button>
+            <button type="button" class="btn-type2">확인</button>
+        </span>
+        <br />
+        <span class="btn-group">
+            <a href="#" class="btn-type">취소</a>
+            <a href="#" class="btn-type2">확인</a>
+        </span>
+        <br />
+        <span class="btn-single">
+            <a href="#" class="btn-type2">확인</a>
+            <a href="#" class="btn-type3">확인</a>
+            <span class="btn-type2 disabled">확인</span>
+        </span>
+        <br />
+        <br />
+
+        <label class="chk-container">
+            <input type="checkbox" name="" />
+            <span>[필수] 약관 전체 동의</span>
+        </label>
+        
+        <br />
+        <br />
+        
+        <label class="switch">
+            <input type="checkbox" />
+            <span class="slider"></span>
+        </label>
+        <label class="switch">
+            <input type="checkbox" checked />
+            <span class="slider"></span>
+        </label>
+        <label class="switch">
+            <input type="checkbox" disabled />
+            <span class="slider"></span>
+        </label>
+        
+        <br />
+        <br />
+
+        <label class="chk-container">
+            <input type="radio" name="radio" checked /> <span>남자</span>
+        </label>
+        <label class="chk-container">
+            <input type="radio" name="radio" /> <span>여자</span>
+        </label>
+        
+        <br />
+        <br />
+        
+        <input type="text" name="" title="회원아이디 입력" placeholder="회원아이디 입력" />
+
+        <br />
+        <br />
+
+        <select title="플랫폼사 선택">
+            <option value="">카카오퀵</option>
+            <option value="">쿠팡이츠</option>
+            <option value="">배민커넥트</option>
+            <option value="">부릉</option>
+            <option value="">바로고</option>
+        </select>
+
+        <hr>
+
+        <!--  -->
+        <fieldset class="form-group">
+        <legend>로그인</legend>
+            <ul>
+                <li>
+                    <span class="tit">아이디</span>
+                    <input type="text" name="" title="회원아이디 입력" placeholder="회원아이디 입력" />
+                </li>
+                <li>
+                    <span class="tit">비밀번호</span>
+                    <input type="password" name="" title="비밀번호 입력 입력" placeholder="비밀번호 입력" />
+                </li>
+            </ul>
+            <span class="btn-single">
+                <button type="button" class="btn-type2">로그인</button>
+            </span>
+        </fieldset>
+
+        <hr>
+
+        <fieldset class="form-group">
+        <legend>회원가입</legend>
+            <ul>
+                <li class="id-check">
+                    <span class="tit">아이디</span>
+                    <input type="text" name="" title="회원아이디 입력" placeholder="회원아이디 입력" />
+                    <button type="button" class="btn-type">중복조회</button>
+                    <p class="check-validate">6자리 이상 영문 또는 영문+숫자로 입력해주세요.</p>
+                </li>
+                <li>
+                    <span class="tit">비밀번호</span>
+                    <input type="password" name="" title="비밀번호 입력" placeholder="영문+숫자+특수기호 조합 8~20자리" />
+                    <p class="check-validate">영문+숫자+특수기호 조합으로 8~20자리 입력해주세요.</p>
+                </li>
+                <li>
+                    <span class="tit">비밀번호 확인</span>
+                    <input type="password" name="" title="비밀번호 재입력" placeholder="비밀번호 재입력" />
+                    <p class="check-validate">비밀번호를 다시 확인해주세요.</p>
+                </li>
+            </ul>
+        </fieldset>
+        
+        <hr>
+        
+        <fieldset class="form-group">
+        <legend></legend>
+            <ul>
+                <li>
+                    <span class="tit">이름</span>
+                    <input type="text" name="" title="이름 입력" placeholder="이름 입력" />
+                    <p class="check-validate">이름을 정확히 입력해주세요.</p>
+                </li>
+                <li class="birth">
+                    <span class="tit">생년월일</span>
+                    <input type="text" name="" title="생년월일 입력" placeholder="예 : 19810219" />
+                    <p class="check-validate">생년월일을 정확히 입력해주세요.</p>
+                </li>
+                <li class="gender">
+                    <span class="tit">성별</span>
+                    <label class="chk-container">
+                        <input type="radio" name="radio" checked /> <span>남자</span>
+                    </label>
+                    <label class="chk-container">
+                        <input type="radio" name="radio" /> <span>여자</span>
+                    </label>
+                </li>
+                <li class="chk-mobile">
+                    <span class="tit">통신사 선택</span>
+                    <ul>
+                        <li><button type="button" class="btn-type">SKT</button></li>
+                        <li><button type="button" class="btn-type">KT</button></li>
+                        <li><button type="button" class="btn-type">LG U+</button></li>
+                        <li><button type="button" class="btn-type">알뜰폰</button></li>
+                    </ul>
+                    <ul class="sub-btn-group">
+                        <li><button type="button" class="btn-type">SKT 알뜰폰</button></li>
+                        <li><button type="button" class="btn-type">KT 알뜰폰</button></li>
+                        <li><button type="button" class="btn-type">LG U+ 알뜰폰</button></li>
+                    </ul>
+                </li><li>
+                    <span class="tit">휴대폰번호</span>
+                    <input type="text" name="" title="휴대폰번호 입력" placeholder="'-' 없이 숫자만 입력" />
+                    <p class="check-validate">휴대폰번호를 정확히 입력해주세요.</p>
+                </li>
+                <li class="certify-num">
+                    <span class="tit">인증번호 6자리</span>
+                    <input type="text" name="" title="인증번호 6자리 입력" />
+                    <button type="button" class="btn-type">재발송</button>
+                    <span class="timer">2분 59초</span>
+                </li>
+                <li class="address">
+                    <span class="tit">사업장주소<em>*</em></span>
+                    <button type="button" class="btn-type">주소찾기</button>
+                    <input type="text" name="" title="주소 입력" placeholder="주소 검색" />
+                    <input type="text" name="" title="상세주소 입력" placeholder="상세주소 입력" />
+                </li>
+            </ul>
+        </fieldset>
+        <span class="btn-group single">
+            <a href="#" class="btn-type2">확인</a>
+        </span>
+        <!-- // -->
+
+        <br />
+        <br />
+
+    </div>
+    <!-- // Contents -->
+</div>
+</body>
+</html>
