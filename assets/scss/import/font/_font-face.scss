@@ -1,12 +1,9 @@
 @charset "UTF-8";
 
-@each $font-name in $font-face-custom {
-  $font-path : $web-font-path + $font-name;
+@each $font-weight in $font-face-custom {
+    @include font-face($font, $font-weight);
+}
 
-  @font-face {
-    font-family: $font-name;
-    src: url($font-path + '.woff') format('woff');
-    font-style: normal;
-    font-weight: normal;
-  }
+@each $font-weight in $font-face-custom2 {
+    @include font-face($font2, $font-weight);
 }

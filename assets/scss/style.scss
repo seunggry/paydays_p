@@ -58,7 +58,7 @@ label.chk-container{
 label.chk-container input{position: absolute; display: none; opacity: 0;}
 label.chk-container span{display: inline-block; margin:0; vertical-align: middle;}
 label.chk-container span:before{content:''; position: absolute; top: 0; left: 0; display: block; width:1.71rem; height: 1.71rem;}
-label.chk-container input[type=checkbox] ~ span{margin-left:2.57rem; @include font('medium', #000);}
+label.chk-container input[type=checkbox] ~ span{margin-left:2.57rem;}
 label.chk-container input[type=checkbox] ~ span::before{background: url(../images/common/icon-check-unselect.svg) 0 0 no-repeat;}
 label.chk-container input[type=checkbox]:checked ~ span::before{background-image: url(../images/common/icon-check-select.svg);}
 label.chk-container input[type=radio] ~ span{margin: 3px 0 0 1.63rem; color: #c6c6c6; font-family: 'SpoqaHanSansNeo-Light', sans-serif;}

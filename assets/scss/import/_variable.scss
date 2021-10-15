@@ -5,17 +5,18 @@ $font: SpoqaHanSansNeo;
 $font2: OneShinhan;
 
 $font-face-custom: (
-  $font+'-Thin',
-  $font+'-Light',
-  $font+'-Regular',
-  $font+'-Medium',
-  $font+'-Bold',
-
-  $font2+'Light',
-  $font2+'Medium',
-  $font2+'Bold'
-
+    '-Thin',
+    '-Light',
+    '-Regular',
+    '-Medium',
+    '-Bold'
 ) !global !default;
+
+$font-face-custom2: (
+    'Light',
+    'Medium',
+    'Bold'
+)!global !default;
 
 //기본 폰트 설정
 $default-font-size: 14px !default;

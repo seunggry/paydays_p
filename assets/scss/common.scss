@@ -2,12 +2,12 @@
 
 @import "import/reset";
 @import "import/base";
-@import "import/font";
+@import "import/font/font-face";
 
 
 /* Root Font Style */
 :root{
-    @include font('regular', 14px, 20/14, #000);
+    //@include font('regular', 14px, 20/14, #000);
     word-break: keep-all;
     word-wrap: break-word;
 }
