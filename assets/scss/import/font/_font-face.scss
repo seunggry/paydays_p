@@ -1,9 +1,0 @@
-@charset "UTF-8";
-
-@each $font-weight in $font-face-custom {
-    @include font-face($font, $font-weight);
-}
-
-@each $font-weight in $font-face-custom2 {
-    @include font-face($font2, $font-weight);
-}

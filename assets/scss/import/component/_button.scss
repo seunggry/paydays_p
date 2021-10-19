@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+/* Button Type */
+.btn-type, .btn-type2, .btn-type3{
+    display: inline-block;
+    box-sizing: border-box;
+    height: calc-unit(54px);
+    padding: 0 calc-unit(10px);
+    border-radius: calc-unit(2px);
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    font-size: calc-unit(16px);
+    line-height: calc-unit(48px);
+    cursor: pointer;
+}
+.btn-type{background: #fff; border: 1px solid #f4f4f4; color: #191919;}
+.btn-type2{background: #24263a; color: #fff;}
+.btn-type3{border: 1px solid #fb802d; color: #fb802d;}
+.disabled{background-color: #ddd; color: #fff; cursor: default;}
+
+.btn-group{display: flex; flex-flow: row nowrap; justify-content: space-between;}
+.btn-group *{flex: 1; margin-left: calc-unit(10px);}
+.btn-group *:first-child{margin-left: 0;}
+.btn-single{display: block;}
+.btn-single *{display:block; width: 100%;}

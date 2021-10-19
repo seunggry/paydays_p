@@ -1,22 +1,5 @@
 @charset "UTF-8";
 
-@import "variable";
+@import "base/reset";
 
-@import "function/fn_unit_calculator";
-
-@import "mixin/mixin_font";
-@import "mixin/mixin_utill";
-
-
-@media screen and (min-width:960px){
-    .msg-comfirm .banner{position: inherit; bottom: auto; left: auto; width: 100%; margin-left: 0; margin-top: 4.28rem;}
-}
-
-@media screen and (max-height:680px){
-    .lay-bottom .scroll{overflow: hidden scroll; max-height: 18.57rem;}
-}
-
-@media screen and (max-height:640px){
-    .credit .desc{margin-bottom: revert; background-position-y: 137px;}
-    .credit .desc small.notice{margin-top: 267px; padding-top: 10px;}
-}
+@import "base/font-face";

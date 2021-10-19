@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* Form */
+legend{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
+select, textarea, input, label{vertical-align:middle;}
+select, textarea, input{@include vendor-prefix(appearance, none);}
+input[type=search]{-webkit-appearance:textfield}
+input[type=checkbox], input[type=radio]{box-sizing:border-box;padding:0;margin:0;}
+button::-moz-focus-inner, input::-moz-focus-inner{border:0;padding:0}
+select:-moz-focusring{color:transparent;text-shadow:0 0 0 #000}
+select::-ms-expand{display:none}
+
+input[type=text],
+input[type=password]{
+    box-sizing: border-box;
+    padding: .7rem 0;
+    border: 0;
+    border-bottom: 1px solid #f4f4f4;
+    color: #191919;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.68;
+}
+input::placeholder{color: #c6c6c6; font-weight: normal; font-family:'SpoqaHanSansNeo-Light',sans-serif;}
+input:-ms-input-placeholder{color: #c6c6c6; font-weight: normal; font-family:'SpoqaHanSansNeo-Light',sans-serif;}/* ie 10~ */
+input::-ms-input-placeholder{color: #c6c6c6; font-weight: normal; font-family:'SpoqaHanSansNeo-Light',sans-serif;}/* Microsoft Edge */
+
+label.chk-container{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    height: 1.71rem;
+    font-size: 16px;
+    cursor: pointer;
+    @include vendor-prefix(user-select, none);
+}
+label.chk-container input{position: absolute; display: none; opacity: 0;}
+label.chk-container span{display: inline-block; margin:0; vertical-align: middle;}
+label.chk-container span:before{content:''; position: absolute; top: 0; left: 0; display: block; width:1.71rem; height: 1.71rem;}
+label.chk-container input[type=checkbox] ~ span{margin-left:2.57rem;}
+label.chk-container input[type=checkbox] ~ span::before{background: url(../images/common/icon-check-unselect.svg) 0 0 no-repeat;}
+label.chk-container input[type=checkbox]:checked ~ span::before{background-image: url(../images/common/icon-check-select.svg);}
+label.chk-container input[type=radio] ~ span{margin: 3px 0 0 1.63rem; color: #c6c6c6; font-family: 'SpoqaHanSansNeo-Light', sans-serif;}
+label.chk-container input[type=radio] ~ span::before{background: url(../images/common/icon-radio-unselect.svg) 0 0 / 100% no-repeat;}
+label.chk-container input[type=radio]:checked ~ span{margin-top:1px; color:#191919; font-family: 'SpoqaHanSansNeo-Bold', sans-serif;}
+label.chk-container input[type=radio]:checked ~ span::before{background-image: url(../images/common/icon-radio-select.svg);}
