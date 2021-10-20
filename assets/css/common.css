@@ -36,78 +36,66 @@ a:hover {
   text-decoration: none; }
 
 @font-face {
-  font-family: SpoqaHanSansNeo-Thin;
+  font-family: "SpoqaHanSansNeo-Thin";
   src: url("../font/SpoqaHanSansNeo-Thin.woff") format("woff");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  font-family: SpoqaHanSansNeo-Light;
+  font-family: "SpoqaHanSansNeo-Light";
   src: url("../font/SpoqaHanSansNeo-Light.woff") format("woff");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  font-family: SpoqaHanSansNeo-Regular;
+  font-family: "SpoqaHanSansNeo-Regular";
   src: url("../font/SpoqaHanSansNeo-Regular.woff") format("woff");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  font-family: SpoqaHanSansNeo-Medium;
+  font-family: "SpoqaHanSansNeo-Medium";
   src: url("../font/SpoqaHanSansNeo-Medium.woff") format("woff");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  font-family: SpoqaHanSansNeo-Bold;
+  font-family: "SpoqaHanSansNeo-Bold";
   src: url("../font/SpoqaHanSansNeo-Bold.woff") format("woff");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  font-family: OneShinhanLight;
+  font-family: "OneShinhanLight";
   src: url("../font/OneShinhanLight.woff") format("woff");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  font-family: OneShinhanMedium;
+  font-family: "OneShinhanMedium";
   src: url("../font/OneShinhanMedium.woff") format("woff");
   font-style: normal;
   font-weight: normal; }
 
 @font-face {
-  font-family: OneShinhanBold;
+  font-family: "OneShinhanBold";
   src: url("../font/OneShinhanBold.woff") format("woff");
   font-style: normal;
   font-weight: normal; }
 
 /* Root Font Style */
 :root {
-  font-family: SpoqaHanSansNeo-Regular;
+  font-family: "SpoqaHanSansNeo-Regular";
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.42857;
   color: #000;
   word-break: keep-all;
   word-wrap: break-word; }
 
-/* Table */
-table {
-  border-collapse: collapse; }
-
-caption {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  clip-path: polygon(0 0, 0 0, 0 0); }
-
 /* ClearFix */
 .clearfix,
 .clearfix:after {
-  content: '';
+  content: "";
   display: block;
   clear: both; }
 

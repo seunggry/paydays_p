@@ -3,6 +3,7 @@
 @import "import/utills";
 @import "import/base";
 
+
 /* Root Font Style */
 :root{
     @include font('regular', 14px, 20/14);
@@ -11,14 +12,20 @@
     word-wrap: break-word;
 }
 
-/* Table */
-table{border-collapse:collapse;}
-caption{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
-
 /* ClearFix */
 .clearfix,
-.clearfix:after{content:''; display: block; clear: both;}
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
 
 /* Hidden Text */
-.hiddenText{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip-path:polygon(0 0, 0 0, 0 0);}
-
+.hiddenText {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}

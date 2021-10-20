@@ -2,20 +2,22 @@
 
 /* Table */
 table{
+    border-collapse: collapse;
+
     &.tbl-row-type{
         width: 100%;
-        margin-bottom: calc-unit(20px);
+        margin-bottom: rem(20px);
 
         th, td{
             box-sizing: border-box;
-            padding-bottom: calc-unit(18px);
-            font-size: calc-unit(14px);
+            padding-bottom: rem(18px);
+            font-size: rem(14px);
             line-height: 1.6;
         }
 
         th{
             width: 35%;
-            padding-right: calc-unit(20px);
+            padding-right: rem(20px);
             color: #535353;
             text-align: left;
         }
@@ -33,10 +35,12 @@ table{
         }
     }
 }
-//
-//@include min-screen(960px){
-//    table.tbl-row-type th{width: 25%;}
-//    table.tbl-row-type td{width: 75%;}
-//}
 
-
+caption {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+}

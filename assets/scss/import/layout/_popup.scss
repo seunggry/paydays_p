@@ -1,0 +1,117 @@
+@charset "utf-8";
+/* popup style */
+
+#wrap.popup {
+    header { justify-content: flex-end; }
+    .desc { margin-top: 0; }
+}
+
+.close {
+    width: rem(18px);
+    height: rem(16px);
+    margin: rem(53px) rem(24px) 0 0;
+    background: url('../images/common/icon-close.svg') 0 0 / 100% no-repeat;
+}
+@include min-screen(960px) {
+    #wrap {
+        min-width: 960px;
+        width: 960px;
+        margin: 0 auto;
+    }
+}
+
+/* Popup(Layer) */
+.dimmed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    opacity: .7;
+    z-index: 100;
+}
+
+.lay-popup {
+    width: 100vw;
+    height: 100vh;
+    min-width: 320px;
+    overflow: hidden;
+}
+
+.lay-contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: calc(100% - #{rem(40px)});
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: rem(20px);
+    background: #fff;
+    border-radius: 2px;
+    text-align: center;
+    z-index: 200;
+
+    p {
+        margin: rem(12px) 0 rem(24px);
+        color: #000;
+        font-size: rem(16px);
+        line-height: 1.68;
+
+        strong.id {
+            display: block;
+            margin-top: rem(12px);
+            color: #4c4c4c;
+            font-size: rem(22px);
+            font-weight: bold;
+            line-height: 1.36;
+        }
+
+        small {
+            display: block;
+            margin-top: .57rem;
+            color: #717171;
+            font-size: rem(12px);
+            line-height: 1.6;
+        }
+    }
+
+    .btn-type { background: #eee; }
+}
+
+@media screen and (min-width: 960px) {
+    .lay-contents { width: 362px; }
+}
+
+.lay-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: rem(24px);
+    border-radius: 10px 10px 0 0;
+    background: #fff;
+    z-index: 200;
+
+    .close {
+        position: absolute;
+        top: rem(24px);
+        right: rem(24px);
+        margin: 0;
+
+        em {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            clip-path: polygon(0 0, 0 0, 0 0);
+        }
+    }
+
+    .desc {
+        margin-top: 0;
+        @include font('bold2', 19px);
+    }
+}

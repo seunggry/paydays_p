@@ -1,0 +1,360 @@
+@charset "utf-8";
+/* header style */
+
+/* gnb */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: rem(88px);
+    z-index: 10;
+    @include vendor-prefix(transition, all .2s ease-in-out);
+
+    &.scroll{
+        height: rem(62px);
+        background: #fff;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+
+        h1 {
+            margin-top: rem(17px);
+        }
+
+        a {
+            &.close, &.go-back, &.all-menu {
+                margin-top: rem(25px);
+            }
+
+            &.btn-login {
+                margin-top: rem(18px);
+            }
+        }
+    }
+
+    h1 {
+        width: rem(76px);
+        height: rem(24px);
+        margin: rem(50px) 0 0 rem(24px);
+        background: url('../images/common/paydays-logo@3x.png') 0 0 / 100% no-repeat;
+        @include vendor-prefix(transition, all .2s ease-in-out);
+    }
+
+    em {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        clip-path: polygon(0 0, 0 0, 0 0);
+    }
+
+    a {
+        &.go-back, &.all-menu, &.btn-login, &.close {
+            @include vendor-prefix(transition, all .2s ease-in-out);
+        }
+
+        &.go-back {
+            position: absolute;
+            left: 0;
+            width: rem(18px);
+            height: rem(16px);
+            margin: rem(53px) 0 0 rem(24px);
+            background: url('../images/common/icon-back.svg') 0 0 / 100% no-repeat;
+        }
+
+        &.close {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &.btn-login {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: block;
+            width: rem(68px);
+            height: rem(28px);
+            margin: rem(47px) rem(58px) 0 0;
+            text-align: center;
+            border-radius: rem(14px);
+            border: 1px solid #ccc;
+            color: #191919;
+            font-size: rem(13px);
+            line-height: rem(28px);
+        }
+    }
+}
+
+nav a.all-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: rem(18px);
+    height: rem(16px);
+    margin: rem(53px) rem(24px) 0 0;
+    background: url('../images/common/top-icon-menu@3x.png') 0 0 / 100% no-repeat;
+}
+
+h2 {
+    @include vendor-prefix(transition, all .2s ease-in-out);
+
+    &.header-tit.scroll {
+        margin-top: rem(22px);
+    }
+}
+
+@media screen and (min-width: 960px) {
+    header {
+        width: 960px;
+        left: 50%;
+        margin-left: -480px;
+    }
+}
+
+/* 전체메뉴(레이어) */
+.lay-menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    min-width: 320px;
+    box-sizing: border-box;
+    padding: 0 rem(24px);
+    overflow-x: hidden;
+    background: #fff;
+    z-index: 200;
+
+    .header {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        height: 6.28rem;
+        box-sizing: border-box;
+        margin: 0 rem(-24px);
+        padding: 0 rem(24px) 16px;
+
+        a {
+            color: #000;
+            font-size: rem(12px);
+            margin-right: 16px;
+
+            &.modify {
+                padding-left: 14px;
+                background: url(../images/common/icon-pen.svg) 0 1px no-repeat;
+            }
+
+            &.logout {
+                padding-left: 14px;
+                background: url(../images/common/icon-logout.svg) 0 0 no-repeat;
+            }
+
+            &.close {
+                position: inherit;
+                margin: 0;
+                margin-left: 4px;
+
+                em {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip-path: polygon(0 0, 0 0, 0 0);
+                }
+            }
+        }
+    }
+
+    .user-info {
+        display: block;
+        margin: rem(-5px) 0 rem(25px);
+        color: #000;
+        @include font('light2', 22px);
+
+        em {
+            position: inherit;
+            width: inherit;
+            height: inherit;
+            margin: inherit;
+            clip-path: inherit;
+            @include font-family('medium2');
+        }
+
+        small {
+            display: block;
+            margin-top: rem(13px);
+            color: #6e6e6e;
+            @include font('light', 12px);
+        }
+    }
+
+    .menu-list li {
+        min-height: rem(32px);
+        margin: rem(7px) 0 rem(20px);
+        padding-left: rem(27px);
+        color: #000;
+        @include font('medium', 16px);
+        background: url('') 0 0 no-repeat;
+
+        &.home {
+            background-image: url('../images/common/icon-home.svg');
+            background-position: 0 -1px;
+        }
+
+        $icons: (myincome:money-paper, prepay:point-search, point:point-card, credit:credit-score, platform:platform, custom:service, cs:cs, mydata:lock);
+        @each $className,$icon in $icons {
+            &.#{$className}{
+                background-image: url('../images/common/icon-#{$icon}.svg');
+            }
+        }
+
+        a { color: #000; }
+
+        span.income {
+            display: inline-block;
+            height: rem(32px);
+            margin: rem(-8px) 0 0 rem(12px);
+            padding: 0 rem(13px);
+            border-radius: 16px;
+            vertical-align: middle;
+            background: #fb802d;
+            color: #fff;
+            @include font('light', 14px, #{rem(35px)});
+        }
+
+        &.cs {
+            color: #ff5829;
+
+            ul {
+                margin: rem(14px) 0 rem(12px) rem(-27px);
+                padding-top: rem(13px);
+                border-top: 1px solid #e6e6e6;
+                border-bottom: 1px solid #e6e6e6;
+            }
+
+            li {
+                min-height: auto;
+                margin: rem(12px) 0 rem(24px);
+                padding-left: 0;
+                background: none;
+                color: #454545;
+                @include font('regular', 14px);
+
+                a { color: #454545; }
+            }
+        }
+    }
+
+    .footer {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: rem(88px);
+        margin: rem(45px) rem(-24px) 0;
+        padding: 0 rem(24px);
+        border-top: rem(12px) solid #eee;
+        background: url(../images/common/paydays-logo@3x.png) rem(24px) rem(21px) / rem(76px) rem(24px) no-repeat;
+
+        a {
+            margin-top: rem(14px);
+            color: #717171;
+            font-size: rem(12px);
+
+            &:before {
+                content: '';
+                display: inline-block;
+                width: rem(2px);
+                height: rem(16px);
+                margin: -.1rem rem(18px) 0 1.35rem;
+                vertical-align: middle;
+                background: #dcdcdc;
+            }
+
+            &:first-child:before { display: none; }
+        }
+    }
+
+    &.user-login {
+        .menu-list li.cs {
+            background: url('../images/common/icon-cs-off.svg') 0 0 no-repeat;
+            color: #000;
+
+            ul { border-bottom-width: 0; }
+        }
+
+        .user-info a.lnk-login {
+            display: inline-block;
+            margin-bottom: rem(27px);
+            padding-right: rem(13px);
+            background: url('../images/common/icon-go3.svg') 100% 55% no-repeat;
+            @include font-family('bold2');
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 0;
+        }
+    }
+}
+
+@include min-screen(960px) {
+    .lay-menu {
+        width: 960px;
+        height: auto;
+        left: 50%;
+        margin-left: -480px;
+
+        .user-info {
+            width: 50%;
+            margin-top: -50px;
+        }
+
+        .menu-list {
+            height: 240px;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: flex-start;
+            align-content: space-around;
+
+            li {
+                width: 304px;
+                box-sizing: border-box;
+
+                &:nth-child(9) { margin-top: 5px; }
+
+                &.cs {
+                    ul {
+                        margin-top: 18px;
+                        margin-bottom: 0;
+                    }
+
+                    li { margin: 4px 0 16px; }
+                }
+            }
+        }
+
+        .footer { margin-top: 10px; }
+
+        &.user-login {
+            .footer {
+                position: initial;
+                width: auto;
+                margin: 45px rem(-24px) 0;
+            }
+
+            .menu-list {
+                height: auto;
+                flex-direction: row;
+            }
+        }
+    }
+}

@@ -37,7 +37,7 @@
     @if($font-size != null and $font-size != '') {
         @if(not $use-unit-px) {
             //rem 단위 사용
-            font-size: calc-unit($font-size);
+            font-size: rem($font-size);
         } @else {
             //기본 px 사용
             font-size: $font-size;
@@ -46,6 +46,6 @@
 
     //line-height
     @if($line-height != null and $line-height != '') {
-        line-height: toFixed-first($line-height);
+        line-height: $line-height;
     }
 }
