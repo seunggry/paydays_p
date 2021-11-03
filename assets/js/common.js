@@ -27,15 +27,15 @@ function clickDefaultFn(){
 //accordion event
 function accordionFn(){
     $('.btn-more').on('click', function(){
-        let brief = $(this).siblings('.brief'),
-            listLi = $(this).parents('li');
+        let $brief = $(this).siblings('.brief'),
+            $listLi = $(this).parents('li');
 
-        if( brief.is(':visible') ){
+        if( $brief.is(':visible') ){
             $('.list li').removeClass('active');
-            listLi.addClass('active');
+            $listLi.addClass('active');
             $(this).text('접기');
         } else{
-            listLi.removeClass('active');
+            $listLi.removeClass('active');
             $(this).text('더보기');
         }
     });
@@ -43,32 +43,31 @@ function accordionFn(){
 
 function accordionTitAreaFn(){
     $('.accordion .tit').on('click', function(){
-        let detial = $(this).siblings('.detail');
+        let $detial = $(this).siblings('.detail');
 
         $('.accordion .tit').removeClass('active');
         $('.accordion .detail').slideUp();
 
-        if( !detial.is(':visible') ){
+        if( !$detial.is(':visible') ){
             $(this).addClass('active');
-            detial.slideDown();
+            $detial.slideDown();
         } else{
             $(this).removeClass('active');
-            detial.slideUp();
+            $detial.slideUp();
         }
     });
 }
 
 function accordionBtnFn(){
     $('.btn-dropdown').on('click', function(){
-        let brief = $(this).parents('.brief'),
-            detail = $(this).parents('.brief').siblings('.detail');
+        let $detail = $(this).parents('.brief').siblings('.detail');
 
-        if( !detail.is(':visible') ){
+        if( !$detail.is(':visible') ){
             $(this).addClass('active');
-            detail.slideDown();
+            $detail.slideDown();
         } else{
             $(this).removeClass('active');
-            detail.slideUp();
+            $detail.slideUp();
         }
     });
 }
@@ -76,27 +75,35 @@ function accordionBtnFn(){
 function agreeChkClickFn(){
 
     $('.all-chk input[name="allChk"]').on("change", function(){
-        let listChk = $(this).parents('.agree-chk').children('.list-chk');
+        let $listChk = $(this).parents('.agree-chk').children('.list-chk');
 
         if( $(this).is(':checked') ){
-            listChk.find('input:checkbox').attr("checked", true);
+            $listChk.find('input:checkbox').attr("checked", true);
         }else{
-            listChk.find('input:checkbox').attr("checked", false);
+            $listChk.find('input:checkbox').attr("checked", false);
         }
     });
 
-    $('.list-chk input[type="checkbox"]').on("change", function(){
-        let listChkInput = $(this).parents('.list-chk').find('input[type="checkbox"]:checked'),
-            listChkIdx = $(this).parents('.list-chk').find('input[type="checkbox"]').length,
-            allChkInput  = $(this).parents('.list-chk').siblings('.all-chk').find('input[name="allChk"]');
+    $(".list-chk").each(function(){
+        let $allChkTag  = $(this).siblings().find('input[name="allChk"]'),
+            $chkTag     = $(this).find("input:checkbox"),
+            checkLength = $chkTag.length;
 
-        allChkInput.attr("checked", false);
+        $chkTag.on("change", function(){
+            let checkCnt = 0;
 
-        if( listChkInput.length === listChkIdx ){
-            allChkInput.attr("checked", true);
-        } else {
-            allChkInput.attr("checked", false);
-        }
+            $chkTag.each(function(){
+                if( $(this).is(':checked') ){
+                    checkCnt++;
+                }
+            });
+
+            if( checkLength == checkCnt ){
+                $allChkTag.prop("checked", true);
+            } else {
+                $allChkTag.prop("checked", false);
+            }
+        });
     });
 }
 
