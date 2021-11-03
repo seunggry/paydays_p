@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+/* form */
+input{
+    &[type="text"]{
+        //padding: rem(10px) 0;
+        width: 100%;
+        height: rem(50px);
+        @include font('bold', 16px);
+        border-bottom: 1px solid #f4f4f4;
+        box-sizing: border-box;
+    }
+
+    &::placeholder{
+        @include font-family('light');
+        color: #c6c6c6;
+    }
+
+    &[type="checkbox"], &[type="radio"]{
+        display: none;
+    }
+}
+
+.form-group{
+    > ul{clear: both;}
+    > ul > li + li {margin-top: rem(32px);}
+
+    .tit{
+        @include font('medium', 13px);
+        .super{color: #f05d2b;}
+    }
+    .birth, .gender{display: inline-block; width: calc(50% - #{rem(8px)});}
+    .gender{float: right;}
+    .gender .chk-group{display: flex; align-items: center; height: rem(50px); border-bottom: 1px solid #f4f4f4;}
+    .gender .chk-group .chk{flex: 1;}
+
+    .communicate{
+        .btn-group{
+            display: flex;
+            justify-content: space-between;
+            margin-top: rem(10px);
+
+            > li{
+                margin-right: rem(8px);
+                width: 100%;
+                &:last-child{margin-right: 0;}
+
+                button{
+                    @include font-family('regular');
+                    border: 1px solid #f8f8f8;
+                    border-radius: rem(2px);
+                }
+
+                &.active{
+                    border-color: #383b5a;
+                    button{
+                        color: #fff;
+                        background-color: #383b5a;
+                    }
+                }
+            }
+        }
+        .sub-btn-group{
+            display: flex;
+            justify-content: space-between;
+            margin-top: rem(16px);
+
+            li{
+                margin-right: rem(8px);
+                width: 100%;
+
+                &:last-child{margin-right: 0;}
+                &.active{
+                    button{
+                        color: #fb802d;
+                        border-color: #fb802d;
+                    }
+                }
+
+                button{
+                    padding: 0;
+                    width: 100%;
+                    border-color: #f4f4f4;
+                    border-radius: rem(20px);
+                }
+            }
+        }
+    }
+
+    .input-box{
+        position: relative;
+
+        + input{margin-top: rem(20px);}
+
+        input[type="text"]{padding-right: 40%;}
+
+        .timer{
+            position: absolute;
+            top: 50%;
+            right: 29%;
+            transform: translate(0, -50%);
+            color: #fb802d;
+            font-size: rem(12px);
+
+            &::before{
+                content: '';
+                display: inline-block;
+                margin: rem(-2px) rem(2px) 0 0;
+                width: rem(16px);
+                height: rem(16px);
+                vertical-align: middle;
+                background: url("../images/common/icon-timer.svg") no-repeat center/cover;
+            }
+        }
+
+        button{
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+        }
+    }
+}
+
+
+//switch toggle
+.switch{
+    position: relative; display: inline-flex; align-items: center; width: rem(55px); height: rem(26px);
+
+    .slider{
+        display: inline-block; width: 100%; height: 100%; background-color: #dcdcdc; border-radius:  rem(13px);
+
+        &::before{
+            content: 'OFF';
+            position: absolute;
+            top: 50%;
+            right: rem(4px);
+            transform: translateY(-50%);
+            @include font('bold', 12px);
+            color: #fff;
+            transition: 0.2s;
+        }
+
+        &::after{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: rem(1px);
+            transform: translateY(-50%);
+            width: rem(24px);
+            height: rem(24px);
+            background-color: #fff;
+            border-radius: 50%;
+            box-shadow: 0 3px 1px 0 rgba(0, 0, 0, 0.06), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+            transition: 0.2s;
+        }
+    }
+}
+
+input[type="checkbox"]:checked {
+    ~ .slider{
+        background-color: #24263a;
+
+        &::before{
+            content: 'ON';
+            right: rem(28px);
+        }
+        &::after{
+            left: rem(30px);
+        }
+    }
+}
+input[type="checkbox"]:disabled {
+    ~.slider{
+        background-color: #24263a;
+
+        &::before{
+            content: 'ON';
+            right: rem(28px);
+            color: #5e6075;
+        }
+        &::after{
+            left: rem(30px);
+        }
+    }
+}
+
+//label checkbox, radio
+label.chk{
+    display: inline-block;
+    span{
+        display: inline-flex;
+        align-items: center;
+        @include font('medium', 16px);
+        letter-spacing: rem(-0.5px);
+    }
+
+    input[type="checkbox"] {
+        ~ span::before{
+            content: '';
+            display: inline-block;
+            margin-right: rem(8px);
+            width: rem(24px); height: rem(24px);
+            background: url("../images/common/icon-check-unselect.svg") no-repeat center/contain;
+        }
+
+        &:checked ~ span{
+            &::before{
+                background-image: url("../images/common/icon-check-select.svg");
+            }
+        }
+    }
+
+    input[type="radio"] {
+        ~ span::before{
+            content: '';
+            display: inline-block;
+            margin-right: rem(2px);
+            width: rem(24px); height: rem(24px);
+            background: url("../images/common/icon-radio-unselect.svg") no-repeat center/contain;
+        }
+
+        &:checked ~ span{
+            &::before{
+                background-image: url("../images/common/icon-radio-select.svg");
+            }
+        }
+    }
+}
+
+.all-chk{display: block; padding-bottom: rem(14px); border-bottom: 1px solid #eee;}
+.list-chk{margin: rem(14px) 0 rem(24px);}
+.list-chk li{display: flex; flex-wrap: wrap; align-items: center;}
+.list-chk li + li{margin-top: rem(24px);}
+.list-chk li p{margin-top: rem(16px); padding: rem(16px) rem(20px); width: 100%; font-size: rem(12px); color: #535353; background-color: #f2f2f2; border-radius: rem(4px);}
+
+//select
+select{
+    width: 100%;
+    padding: rem(14px) rem(32px) rem(14px) rem(20px);
+    @include font('medium', 16px);
+    @include vendor-prefix(appearance, none);
+    background: url("../images/common/icon-dropdown.svg") no-repeat right rem(20px) center/ rem(12px) rem(7px);
+
+    &::-ms-expand{display: none;}
+}

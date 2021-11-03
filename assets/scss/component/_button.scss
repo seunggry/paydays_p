@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+/* button */
+
+//$length : 5;
+//
+//@for $i from 1 through $length{
+//    $i: if($i == 1, '', $i);
+//
+//    .btn-type#{$i}{
+//        display: inline-flex;
+//        align-items: center;
+//        justify-content: center;
+//        @include font('medium', 16px);
+//        height: rem(48px);
+//        border-radius: rem(4px);
+//    }
+//}
+
+.btn-type, .btn-type2, .btn-type3, .btn-type4, .btn-type5{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    @include font('medium', 16px);
+    height: rem(48px);
+    border-radius: rem(4px);
+    cursor: pointer;
+}
+
+.btn-type{
+    color: #fff;
+    background-color: #24263a;
+}
+
+.btn-type2{
+    color: #191919;
+    background-color: #eee;
+}
+
+.btn-type3{
+    color: #fb802d;
+    border: 1px solid #fb802d;
+}
+
+.btn-type4{
+    height: rem(40px);
+    font-size: rem(14px);
+}
+
+.btn-type5{
+    padding: 0 16px;
+    width: auto;
+    height: rem(32px);
+    @include font('regular', 13px);
+    border: 1px solid #ccc;
+    border-radius: rem(2px)
+}
+
+.btn-single{
+    *{
+        margin: rem(24px) 0;
+        width: 100%;
+    }
+}
+
+.btn-group{
+    display: flex;
+    justify-content: space-between;
+    margin: rem(24px) 0;
+
+    a, button, span{
+        margin-right: rem(8px);
+        width: 100%;
+
+        &:last-child{margin-right: 0;}
+    }
+}
+
+.disabled{
+    color: #fff;
+    background-color: #ddd;
+}
+
+.btn-more{
+    display: inline-block;
+    margin-top: rem(16px);
+    width: 100%;
+    @include font('medium', 12px);
+    color: #c6c6c6;
+    text-align: center;
+
+    &::after{
+        content: '';
+        display: inline-block;
+        margin-left: rem(8px);
+        width: rem(9px);
+        height: rem(5px);
+        vertical-align: middle;
+        background: url("../images/common/icon-more-down2.svg") no-repeat center/contain;
+    }
+}
+
+.arrow-more{display: inline-block; margin-left: auto; width: rem(24px); height: rem(24px); background: url("../images/common/icon-more-right.svg") no-repeat right center/rem(6px) rem(9px);}
+.btn-dropdown{display: inline-block; margin-left: auto; width: rem(24px); height: rem(24px); background: url("../images/common/icon-dropdown.svg") no-repeat right center/rem(12px) rem(7px);}
+.btn-dropdown.active{transform: rotate(180deg); background-position-x: left;}

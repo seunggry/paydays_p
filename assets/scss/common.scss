@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
-@import "import/utills";
-@import "import/base";
+@import "utills/utills";
+@import "base/base";
 
 
 /* Root Font Style */
 :root{
-    @include font('regular', 14px, 20/14);
-    color: #000;
+    @include font('regular', $root-px, 20/$root-px);
+    color: $color-text-base;
     word-break: keep-all;
     word-wrap: break-word;
 }
@@ -22,10 +22,67 @@
 
 /* Hidden Text */
 .hiddenText {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: polygon(0 0, 0 0, 0 0);
+    @include hidden;
 }
+
+.guide-tit{
+    margin: 60px 0 30px;
+    padding: 20px;
+    @include font('bold', 20px);
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #000;
+}
+
+.guide-sub{
+    margin: 40px 0 30px;
+    padding: 14px;
+    @include font('bold', 16px);
+    text-transform: uppercase;
+    background-color: #f8f8f8;
+
+    &.spacing{
+       margin-left: rem(24px);
+       margin-right: rem(24px);
+    }
+}
+
+/* common */
+
+//accordion
+.accordion .tit{position: relative; padding: rem(18px) rem(24px); border-bottom: 1px solid #eee;}
+.accordion .tit::after{content: ''; position: absolute; top: 50%; right: rem(24px); transform: translateY(-50%); width: rem(12px); height: rem(7px); background: url("../images/common/icon-dropdown.svg") no-repeat center/cover;}
+.accordion .tit.active::after{transform: rotate(180deg);}
+.accordion .detail{display: none; padding: rem(32px) rem(24px); background-color: #f8f8f8;}
+
+//tab
+.tab-list{overflow-x: scroll; display: flex; margin-bottom: rem(24px); border-bottom: 1px solid #eee; box-sizing: border-box; -ms-overflow-style: none;}
+.tab-list::-webkit-scrollbar{display: none;}
+.tab-list li + li{margin-left: rem(26px);}
+.tab-list li a{position: relative; display: inline-block; padding-bottom: rem(8px); @include font('light2', 14px); color: #6e6e6e; white-space: nowrap;}
+.tab-list li.active a{@include font-family('medium2'); color: #000;}
+.tab-list li.active a::after{content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: rem(2px); background-color: #000;}
+
+.tab-list2{display: flex; flex-wrap: wrap; margin-bottom: rem(24px); }
+.tab-list2 li{margin: -1px 0 0 -1px; width: 33.3%; border: 1px solid #eee; box-sizing: border-box;}
+.tab-list2 li:nth-child(1), .tab-list2 li:nth-child(4n){margin-left: 0;}
+.tab-list2 li a{position: relative; display: inline-block; width: 100%; padding: rem(9px) 0; @include font('light2', 14px); color: #6e6e6e; text-align: center;}
+.tab-list2 li.active a{@include font-family('medium2'); color: #000;}
+.tab-list2 li.active a::after{content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: rem(2px); background-color: #000;}
+
+@include max-screen(360px){
+    .tab-list2 li{width: 50%;}
+    .tab-list2 li:nth-child(4n){margin-left: -1px;}
+    .tab-list2 li:nth-child(2n-1){margin-left: 0;}
+}
+
+@include min-screen(840px){
+    .tab-list2 li{flex: 1;}
+    .tab-list2 li:nth-child(4n){margin-left: -1px;}
+}
+
+.tab-list3{overflow-x: scroll; display: flex; margin-bottom: rem(24px); width: calc(100% + #{rem(24px)}); -ms-overflow-style: none;}
+.tab-list3::-webkit-scrollbar{display: none;}
+.tab-list3 li + li{margin-left: rem(4px);}
+.tab-list3 li a{display: inline-block; padding: rem(11px) rem(16px); @include font('medium', 14px); color: #888; white-space: nowrap; background-color: #f8f8f8; border-radius: rem(20px);}
+.tab-list3 li.active a{color: #fff; background-color: #383b5a;}

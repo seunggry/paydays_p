@@ -15,188 +15,617 @@
 
 <body>
 <div id="wrap">
-    <!-- Header -->
-    <header>
-        <h1><em>PayDays</em></h1>
-    </header>
-    <!-- // Header -->
-
     <!-- Contents -->
     <div class="contents">
+        <section>
+            <div class="inner">
+                <p class="guide-tit">Button</p>
 
-        <span class="btn-group">
-            <button type="button" class="btn-type">취소</button>
-            <button type="button" class="btn-type2">확인</button>
-        </span>
-        <br />
-        <span class="btn-group">
-            <a href="#" class="btn-type">취소</a>
-            <a href="#" class="btn-type2">확인</a>
-        </span>
-        <br />
-        <span class="btn-single">
-            <a href="#" class="btn-type2">확인</a>
-            <a href="#" class="btn-type3">확인</a>
-            <span class="btn-type2 disabled">확인</span>
-        </span>
-        <br />
-        <br />
+                <div class="btn-group">
+                    <button type="button" class="btn-type2">취소</button>
+                    <button type="button" class="btn-type">확인</button>
+                </div>
 
-        <label class="chk-container">
-            <input type="checkbox" name="" />
-            <span>[필수] 약관 전체 동의</span>
-        </label>
-        
-        <br />
-        <br />
-        
-        <label class="switch">
-            <input type="checkbox" />
-            <span class="slider"></span>
-        </label>
-        <label class="switch">
-            <input type="checkbox" checked />
-            <span class="slider"></span>
-        </label>
-        <label class="switch">
-            <input type="checkbox" disabled />
-            <span class="slider"></span>
-        </label>
-        
-        <br />
-        <br />
+                <div class="btn-group">
+                    <a href="#" class="btn-type2">취소</a>
+                    <a href="#" class="btn-type">확인</a>
+                </div>
 
-        <label class="chk-container">
-            <input type="radio" name="radio" checked /> <span>남자</span>
-        </label>
-        <label class="chk-container">
-            <input type="radio" name="radio" /> <span>여자</span>
-        </label>
-        
-        <br />
-        <br />
-        
-        <input type="text" name="" title="회원아이디 입력" placeholder="회원아이디 입력" />
+                <div class="btn-single">
+                    <a href="#" class="btn-type">확인</a>
+                    <a href="#" class="btn-type2">확인</a>
+                    <a href="#" class="btn-type3">확인</a>
+                    <span class="btn-type2 disabled">확인</span>
+                </div>
 
-        <br />
-        <br />
+                <button href="#" class="btn-type5">중복조회</button>
+            </div>
+        </section>
 
-        <select title="플랫폼사 선택">
-            <option value="">카카오퀵</option>
-            <option value="">쿠팡이츠</option>
-            <option value="">배민커넥트</option>
-            <option value="">부릉</option>
-            <option value="">바로고</option>
-        </select>
+        <section>
+            <div class="inner">
+                <p class="guide-tit">form</p>
 
-        <hr>
+                <form action="#">
+                    <fieldset class="form-group">
+                        <ul>
+                            <li>
+                                <p class="tit">이름</p>
+                                <input type="text" placeholder="이름 입력">
+                            </li>
+                            <li class=" birth">
+                                <p class="tit">생년월일</p>
+                                <input type="text" placeholder="생년월일 입력">
+                            </li>
+                            <li class="gender">
+                                <p class="tit">성별</p>
+                                <div class="chk-group">
+                                    <label class="chk">
+                                        <input type="radio" name="gender" checked> <span>남자</span>
+                                    </label>
+                                    <label class="chk">
+                                        <input type="radio" name="gender"> <span>여자</span>
+                                    </label>
+                                </div>
+                            </li>
+                            <li class="communicate">
+                                <p class="tit">통신사 선택</p>
+                                <ul class="btn-group">
+                                    <li>
+                                        <button type="button" class="btn-type4">SKT</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn-type4">KT</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn-type4">LG U+</button>
+                                    </li>
+                                    <li class="active">
+                                        <button type="button" class="btn-type4">알뜰폰</button>
+                                    </li>
+                                </ul>
+                                <ul class="sub-btn-group">
+                                    <li class="active">
+                                        <button type="button" class="btn-type5">SKT 알뜰폰</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn-type5">KT 알뜰폰</button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="btn-type5">LG U+ 알뜰폰</button>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="tit">휴대폰번호</p>
+                                <input type="text" placeholder="휴대폰번호 입력">
+                            </li>
+                            <li class="certify-number">
+                                <p class="tit">인증번호 6자리</p>
+                                <div class="input-box">
+                                    <input type="text" placeholder="인증번호 입력">
+                                    <span class="timer">2분 59초</span>
+                                    <button type="button" class="btn-type5">재발송</button>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="tit">사업장주소<span class="super">*</span></p>
+                                <div class="input-box">
+                                    <input type="text" placeholder="주소 검색">
+                                    <button type="button" class="btn-type5">주소찾기</button>
+                                </div>
+                                <input type="text" placeholder="상세주소 입력">
+                            </li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
 
-        <!--  -->
-        <fieldset class="form-group">
-        <legend>로그인</legend>
-            <ul>
-                <li>
-                    <span class="tit">아이디</span>
-                    <input type="text" name="" title="회원아이디 입력" placeholder="회원아이디 입력" />
-                </li>
-                <li>
-                    <span class="tit">비밀번호</span>
-                    <input type="password" name="" title="비밀번호 입력 입력" placeholder="비밀번호 입력" />
-                </li>
-            </ul>
-            <span class="btn-single">
-                <button type="button" class="btn-type2">로그인</button>
-            </span>
-        </fieldset>
+        <section>
+            <div class="inner">
+                <p class="guide-tit">table</p>
 
-        <hr>
+                <p class="guide-sub">style_01</p>
+                <table class="tbl-row-type">
+                    <caption>사업자번호,상호명,사업장주소,업태,업종,세금계산서발행 이메일로 구성된 사업자정보 테이블입니다.</caption>
+                    <tbody>
+                        <tr>
+                            <th>사업자번호</th>
+                            <td>082-15-00000</td>
+                        </tr>
+                        <tr>
+                            <th>상호명</th>
+                            <td>해피데이</td>
+                        </tr>
+                        <tr>
+                            <th>사업장주소</th>
+                            <td>서울시 중구 을지로 100 파인애비뉴 A동</td>
+                        </tr>
+                        <tr>
+                            <th>업태</th>
+                            <td>배달대행업</td>
+                        </tr>
+                        <tr>
+                            <th>종목</th>
+                            <td>배달업</td>
+                        </tr>
+                        <tr>
+                            <th>세금계산서 발행 이메일</th>
+                            <td>payday07@shinhan.com</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-        <fieldset class="form-group">
-        <legend>회원가입</legend>
-            <ul>
-                <li class="id-check">
-                    <span class="tit">아이디</span>
-                    <input type="text" name="" title="회원아이디 입력" placeholder="회원아이디 입력" />
-                    <button type="button" class="btn-type">중복조회</button>
-                    <p class="check-validate">6자리 이상 영문 또는 영문+숫자로 입력해주세요.</p>
-                </li>
-                <li>
-                    <span class="tit">비밀번호</span>
-                    <input type="password" name="" title="비밀번호 입력" placeholder="영문+숫자+특수기호 조합 8~20자리" />
-                    <p class="check-validate">영문+숫자+특수기호 조합으로 8~20자리 입력해주세요.</p>
-                </li>
-                <li>
-                    <span class="tit">비밀번호 확인</span>
-                    <input type="password" name="" title="비밀번호 재입력" placeholder="비밀번호 재입력" />
-                    <p class="check-validate">비밀번호를 다시 확인해주세요.</p>
-                </li>
-            </ul>
-        </fieldset>
-        
-        <hr>
-        
-        <fieldset class="form-group">
-        <legend></legend>
-            <ul>
-                <li>
-                    <span class="tit">이름</span>
-                    <input type="text" name="" title="이름 입력" placeholder="이름 입력" />
-                    <p class="check-validate">이름을 정확히 입력해주세요.</p>
-                </li>
-                <li class="birth">
-                    <span class="tit">생년월일</span>
-                    <input type="text" name="" title="생년월일 입력" placeholder="예 : 19810219" />
-                    <p class="check-validate">생년월일을 정확히 입력해주세요.</p>
-                </li>
-                <li class="gender">
-                    <span class="tit">성별</span>
-                    <label class="chk-container">
-                        <input type="radio" name="radio" checked /> <span>남자</span>
-                    </label>
-                    <label class="chk-container">
-                        <input type="radio" name="radio" /> <span>여자</span>
-                    </label>
-                </li>
-                <li class="chk-mobile">
-                    <span class="tit">통신사 선택</span>
-                    <ul>
-                        <li><button type="button" class="btn-type">SKT</button></li>
-                        <li><button type="button" class="btn-type">KT</button></li>
-                        <li><button type="button" class="btn-type">LG U+</button></li>
-                        <li><button type="button" class="btn-type">알뜰폰</button></li>
+                <p class="guide-sub">style_02</p>
+                <table class="tbl-row-type2">
+                    <caption>제공받는자,제공받는자의이용목적,제공받는자의보유‧이용기간,거부권리및불이익으로 구성된 개인(신용)정보 제공 테이블입니다.</caption>
+                    <colgroup>
+                        <col width="28%">
+                        <col width="24%">
+                        <col width="*">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <th scope="row">제공받는자</th>
+                        <td colspan="2">메쉬코리아, 링크아시아 매니지먼트, 코리아크레딧뷰로(KCB)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">제공받는 자의 이용 목적</th>
+                        <td>메쉬코리아, 링크아시아 매니지먼트</td>
+                        <td>본인이 신청한 페이데이즈 카드기반 소득 선정산 서비스 계약 이행(소득정보 제공) 및 본인 여부 확인</td>
+                    </tr>
+                    <tr class="sub">
+                        <td>코리아크레딧뷰로(KCB)</td>
+                        <td>개인(사업자)신용평가 (본인확인을 통한 신용올리기 정보수집 및 등록(개인신용평점 반영)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="3">제공받는 자의 보유‧이용기간</th>
+                        <td>1.메쉬코리아</td>
+                        <td class="desc">제공받는 자의 서비스 종료일까지(단, 관련법령에 따라 보존 의무가 있는 경우는 해당 보존기간까지 보관)</td>
+                    </tr>
+                    <tr class="sub">
+                        <td>2.링크아시아 매니지먼트</td>
+                        <td class="desc">제공받는 자의 회원 탈회 후 30일 또는 서비스 종료일까지(단, 관련법령에 따라 보존 의무가 있는 경우는 해당 보존기간까지 보관)</td>
+                    </tr>
+                    <tr class="sub">
+                        <td>3.코리아크레딧뷰로(KCB)</td>
+                        <td class="desc">제공받는 자의 서비스 종료일까지(회원 탈회 또는 서비스 이용동의 철회 시까지)(단, 관련법령에 따라 보존 의무가 있는 경우는 해당 보존기간까지 보관)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">거부 권리 및 <br/> 불이익</th>
+                        <td colspan="2"><em>위 개인(신용)정보 수집·이용에 관한 동의는 계약의 체결 및 이행을 위하여 필수적이므로, 위 사항에 동의하셔야만 본건 서비스 이용이 가능합니다.</em></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <div class="inner">
+                <p class="guide-tit">Accordion</p>
+
+                <p class="guide-sub">style_01</p>
+                <div class="member_info">
+                    <p class="desc">등록된 고객정보 <span class="num">2</span>건</p>
+                    <ul class="list">
+                        <li>
+                            <table class="tbl-row-type brief">
+                                <caption>상호명,사업자번호로 구성된 사업자정보 테이블입니다.</caption>
+                                <tbody>
+                                <tr>
+                                    <th>상호명</th>
+                                    <td>해피데이</td>
+                                </tr>
+                                <tr>
+                                    <th>사업자번호</th>
+                                    <td>082-15-00000</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <form class="detail">
+                                <fieldset class="form-group">
+                                    <ul>
+                                        <li>
+                                            <p class="tit">사업자번호</p>
+                                            <input type="text" placeholder="이름 입력" value="123-45-67890">
+                                        </li>
+                                        <li>
+                                            <p class="tit">상호명</p>
+                                            <input type="text" placeholder="생년월일 입력" value="신한클럽">
+                                        </li>
+                                        <li>
+                                            <p class="tit">대표자명</p>
+                                            <input type="text" placeholder="성별" value="홍길동">
+                                        </li>
+                                        <li>
+                                            <p class="tit">사업장주소<span class="super">*</span></p>
+                                            <div class="input-box">
+                                                <input type="text" placeholder="주소 검색" value="서울시 중구 을지로 100">
+                                                <button type="button" class="btn-type5">주소찾기</button>
+                                            </div>
+                                            <input type="text" placeholder="상세주소 입력" value="파인애비뉴 A동">
+                                        </li>
+                                        <li>
+                                            <p class="tit">업태</p>
+                                            <input type="text" placeholder="휴대폰번호 입력" value="배달대행업">
+                                        </li>
+                                        <li>
+                                            <p class="tit">업종</p>
+                                            <input type="text" placeholder="휴대폰번호 입력" value="배달대행">
+                                        </li>
+                                        <li>
+                                            <p class="tit">세금계산서 발행 이메일</p>
+                                            <input type="text" placeholder="휴대폰번호 입력" value="payday07@shinhan.com">
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                            <a href="#" class="btn-more">더보기</a>
+                        </li>
+                        <li>
+                            <table class="tbl-row-type brief">
+                                <caption>상호명,사업자번호로 구성된 사업자정보 테이블입니다.</caption>
+                                <tbody>
+                                <tr>
+                                    <th>상호명</th>
+                                    <td>해피데이</td>
+                                </tr>
+                                <tr>
+                                    <th>사업자번호</th>
+                                    <td>082-15-00000</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <form class="detail">
+                                <fieldset class="form-group">
+                                    <ul>
+                                        <li>
+                                            <p class="tit">사업자번호</p>
+                                            <input type="text" placeholder="이름 입력" value="123-45-67890">
+                                        </li>
+                                        <li>
+                                            <p class="tit">상호명</p>
+                                            <input type="text" placeholder="생년월일 입력" value="신한클럽">
+                                        </li>
+                                        <li>
+                                            <p class="tit">대표자명</p>
+                                            <input type="text" placeholder="성별" value="홍길동">
+                                        </li>
+                                        <li>
+                                            <p class="tit">사업장주소<span class="super">*</span></p>
+                                            <div class="input-box">
+                                                <input type="text" placeholder="주소 검색" value="서울시 중구 을지로 100">
+                                                <button type="button" class="btn-type5">주소찾기</button>
+                                            </div>
+                                            <input type="text" placeholder="상세주소 입력" value="파인애비뉴 A동">
+                                        </li>
+                                        <li>
+                                            <p class="tit">업태</p>
+                                            <input type="text" placeholder="휴대폰번호 입력" value="배달대행업">
+                                        </li>
+                                        <li>
+                                            <p class="tit">업종</p>
+                                            <input type="text" placeholder="휴대폰번호 입력" value="배달대행">
+                                        </li>
+                                        <li>
+                                            <p class="tit">세금계산서 발행 이메일</p>
+                                            <input type="text" placeholder="휴대폰번호 입력" value="payday07@shinhan.com">
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </form>
+                            <a href="#" class="btn-more">더보기</a>
+                        </li>
                     </ul>
-                    <ul class="sub-btn-group">
-                        <li><button type="button" class="btn-type">SKT 알뜰폰</button></li>
-                        <li><button type="button" class="btn-type">KT 알뜰폰</button></li>
-                        <li><button type="button" class="btn-type">LG U+ 알뜰폰</button></li>
-                    </ul>
-                </li><li>
-                    <span class="tit">휴대폰번호</span>
-                    <input type="text" name="" title="휴대폰번호 입력" placeholder="'-' 없이 숫자만 입력" />
-                    <p class="check-validate">휴대폰번호를 정확히 입력해주세요.</p>
+                </div>
+            </div>
+
+            <p class="guide-sub spacing">style_02</p>
+            <ul class="notice-list accordion">
+                <li>
+                    <div class="tit">
+                        <div class="txt">
+                            <p>8월 신규플랫폼사 제휴 안내</p>
+                            <span class="new"></span>
+                            <span class="date">2021.08.01</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <p>2021년 7월 신규 플랫폼사 제휴 안내해 드립니다.</p>
+                        <br/>
+                        <strong>소득통합정리 제휴 플랫폼사 (2021년 07월 기준)</strong>
+                        <br/><br/>
+                        <p>- 부릉</p>
+                        <p>- LINK X PARTNERS</p>
+                        <br/>
+                        <strong>소득통합정리 제휴 플랫폼사 (2021년 07월 기준)</strong>
+                        <br/><br/>
+                        <p>- 부릉</p>
+                        <p>- LINK X PARTNERS</p>
+                    </div>
                 </li>
-                <li class="certify-num">
-                    <span class="tit">인증번호 6자리</span>
-                    <input type="text" name="" title="인증번호 6자리 입력" />
-                    <button type="button" class="btn-type">재발송</button>
-                    <span class="timer">2분 59초</span>
+                <li>
+                    <div class="tit">
+                        <div class="txt">
+                            <p>7월 신규플랫폼사 제휴 안내</p>
+                            <span class="date">2021.08.01</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <p>2021년 7월 신규 플랫폼사 제휴 안내해 드립니다.</p>
+                        <br/>
+                        <strong>소득통합정리 제휴 플랫폼사 (2021년 07월 기준)</strong>
+                        <br/><br/>
+                        <p>- 부릉</p>
+                        <p>- LINK X PARTNERS</p>
+                        <br/>
+                        <strong>소득통합정리 제휴 플랫폼사 (2021년 07월 기준)</strong>
+                        <br/><br/>
+                        <p>- 부릉</p>
+                        <p>- LINK X PARTNERS</p>
+                    </div>
                 </li>
-                <li class="address">
-                    <span class="tit">사업장주소<em>*</em></span>
-                    <button type="button" class="btn-type">주소찾기</button>
-                    <input type="text" name="" title="주소 입력" placeholder="주소 검색" />
-                    <input type="text" name="" title="상세주소 입력" placeholder="상세주소 입력" />
+                <li>
+                    <div class="tit">
+                        <div class="txt">
+                            <p>8월 신규플랫폼사 제휴 안내</p>
+                            <span class="date">2021.08.01</span>
+                        </div>
+                    </div>
+                    <div class="detail">
+                        <p>2021년 7월 신규 플랫폼사 제휴 안내해 드립니다.</p>
+                        <br/>
+                        <strong>소득통합정리 제휴 플랫폼사 (2021년 07월 기준)</strong>
+                        <br/><br/>
+                        <p>- 부릉</p>
+                        <p>- LINK X PARTNERS</p>
+                        <br/>
+                        <strong>소득통합정리 제휴 플랫폼사 (2021년 07월 기준)</strong>
+                        <br/><br/>
+                        <p>- 부릉</p>
+                        <p>- LINK X PARTNERS</p>
+                    </div>
                 </li>
             </ul>
-        </fieldset>
-        <span class="btn-group single">
-            <a href="#" class="btn-type2">확인</a>
-        </span>
-        <!-- // -->
 
-        <br />
-        <br />
+            <p class="guide-sub spacing">style_03</p>
+            <div class="accordion">
+                <ul class="management-list">
+                    <li>
+                        <div class="tit">
+                            <img src="../../assets/images/common/icon-platform-shinhan-s@3x.png" alt="">
+                            <div class="txt">
+                                <p>신한카드 마이크레딧</p>
+                                <span class="date">2021-08-01 동의 변경</span>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <ul>
+                                <li>
+                                    <p>소득정보 제공 동의</p>
+                                    <label class="switch">
+                                        <input type="checkbox" disabled>
+                                        <span class="slider"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <p>개인정보 제공 동의</p>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <p>개인정보 제공 동의</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tit">
+                            <img src="../../assets/images/common/icon-platform-kcb-s@3x.png" alt="">
+                            <div class="txt">
+                                <p>KCB</p>
+                                <span class="date">2021-08-01 동의 변경</span>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <ul>
+                                <li>
+                                    <p>소득정보 제공 동의</p>
+                                    <label class="switch">
+                                        <input type="checkbox" disabled>
+                                        <span class="slider"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <p>개인정보 제공 동의</p>
+                                    <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider"></span>
+                                    </label>
+                                </li>
+                                <li>
+                                    <p>개인정보 제공 동의</p>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider"></span>
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
 
+        <section>
+            <div class="inner">
+                <p class="guide-tit">CheckBox</p>
+
+                <p class="guide-sub">style_01</p>
+                <div class="agree-chk">
+                    <div class="all-chk">
+                        <label class="chk">
+                            <input type="checkbox" name="allChk">
+                            <span>전체 동의</span>
+                        </label>
+                    </div>
+                    <ul class="list-chk">
+                        <li>
+                            <label class="chk">
+                                <input type="checkbox">
+                                <span>[필수] 서비스 이용 약관</span>
+                            </label>
+                            <a href="#" class="arrow-more"></a>
+                            <p>페이데이즈 소득통합 조회 및 선정산 서비스 이용 동의</p>
+                        </li>
+                        <li>
+                            <label class="chk">
+                                <input type="checkbox">
+                                <span>[필수] 정보 수집/이용 동의</span>
+                            </label>
+                            <a href="#" class="arrow-more"></a>
+                            <p>페이데이즈 서비스 이용을 위한 소득정보,  개인정보, 사업자정보 수집/이용 동의</p>
+                        </li>
+                        <li>
+                            <label class="chk">
+                                <input type="checkbox">
+                                <span>[필수] 제3자 정보제공 동의</span>
+                            </label>
+                            <a href="#" class="arrow-more"></a>
+                            <p>신용 평가기관, 플랫폼사별 소득조회, 선정산 서비스제공을 위한 정보제공 동의</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <p class="guide-sub">style_02</p>
+                <div class="agree-chk certify">
+                    <div class="all-chk brief">
+                        <label class="chk">
+                            <input type="checkbox" name="allChk">
+                            <span>[필수] 약관 전체 동의</span>
+                        </label>
+                        <a href="#" class="btn-dropdown"></a>
+                    </div>
+                    <ul class="list-chk detail">
+                        <li>
+                            <label class="chk">
+                                <input type="checkbox">
+                                <span>개인정보 이용 동의</span>
+                            </label>
+                            <a href="#" class="arrow-more"></a>
+                        </li>
+                        <li>
+                            <label class="chk">
+                                <input type="checkbox">
+                                <span>고유식별 정보 처리 동의</span>
+                            </label>
+                            <a href="#" class="arrow-more"></a>
+                        </li>
+                        <li>
+                            <label class="chk">
+                                <input type="checkbox">
+                                <span>서비스 이용약관 동의</span>
+                            </label>
+                            <a href="#" class="arrow-more"></a>
+                        </li>
+                        <li>
+                            <label class="chk">
+                                <input type="checkbox">
+                                <span>통신사 이용약관 동의</span>
+                            </label>
+                            <a href="#" class="arrow-more"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="inner">
+                <p class="guide-tit">SelectBox</p>
+
+                <select>
+                    <option>소득통합정리 연계 플랫폼사</option>
+                    <option>소득통합정리 연계 플랫폼사2</option>
+                    <option>소득통합정리 연계 플랫폼사3</option>
+                </select>
+            </div>
+        </section>
+
+        <section>
+            <div class="inner">
+                <p class="guide-tit">Tab</p>
+
+                <ul class="tab-list">
+                    <li class="active">
+                        <a href="#">월별 선정산 내역</a>
+                    </li>
+                    <li>
+                        <a href="#">플랫폼별 선정산 내역</a>
+                    </li>
+                </ul>
+                
+                <ul class="tab-list2">
+                    <li class="active">
+                        <a href="#">전체</a>
+                    </li>
+                    <li>
+                        <a href="#">소득통합정리</a>
+                    </li>
+                    <li>
+                        <a href="#">선정산</a>
+                    </li>
+                    <li>
+                        <a href="#">서비스</a>
+                    </li>
+                    <li>
+                        <a href="#">해지</a>
+                    </li>
+                    <li>
+                        <a href="#">이용안내</a>
+                    </li>
+                </ul>
+                
+                <ul class="tab-list3">
+                    <li class="active">
+                        <a href="#">#전체</a>
+                    </li>
+                    <li>
+                        <a href="#">#카드</a>
+                    </li>
+                    <li>
+                        <a href="#">#대출</a>
+                    </li>
+                    <li>
+                        <a href="#">#보험</a>
+                    </li>
+                    <li>
+                        <a href="#">#투자</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!--
+        <section>
+            <div class="inner">
+                <p class="guide-tit">Popup</p>
+
+                <p class="guide-sub">layer</p>
+
+                <p class="guide-sub">flicking</p>
+
+                <p class="guide-sub">page</p>
+            </div>
+        </section>
+        --->
     </div>
     <!-- // Contents -->
 </div>
