@@ -11,7 +11,7 @@
 //        display: inline-flex;
 //        align-items: center;
 //        justify-content: center;
-//        @include font('medium', 16px);
+//        @include font('spoqa-medium', 16px);
 //        height: rem(48px);
 //        border-radius: rem(4px);
 //    }
@@ -21,7 +21,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    @include font('medium', 16px);
+    @include font('spoqa-medium', 16px);
     height: rem(48px);
     border-radius: rem(4px);
     cursor: pointer;
@@ -51,7 +51,7 @@
     padding: 0 16px;
     width: auto;
     height: rem(32px);
-    @include font('regular', 13px);
+    @include font('spoqa-regular', 13px);
     border: 1px solid #ccc;
     border-radius: rem(2px)
 }
@@ -85,7 +85,7 @@
     display: inline-block;
     margin-top: rem(16px);
     width: 100%;
-    @include font('medium', 12px);
+    @include font('spoqa-medium', 12px);
     color: #c6c6c6;
     text-align: center;
 

@@ -1,5 +1,8 @@
+
+
 /* 페이지 로드후 공통 이벤트 */
 function loadFn(){
+    settingScript();
     clickDefaultFn();
     accordionFn();
     accordionTitAreaFn();
@@ -15,6 +18,15 @@ function resizeFn(){
 /* 페이지 스크롤 이벤트 */
 function scrollFn(){
 
+}
+
+//setting.js import
+function settingScript(){
+    $('head').append('<script src=\'../../assets/js/setting.js\'><\/script>');
+
+    // $.getScript("setting.js", function(){
+    //    document.write(str);
+    // });
 }
 
 //클릭 방지 이벤트

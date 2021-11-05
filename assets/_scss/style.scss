@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "utills/utills";
+@import "util/util";
 @import "component/component";
 @import "layout/layout";
 
@@ -19,13 +19,13 @@
 .notice-list li .txt{ display: flex; flex-wrap: wrap; align-items: center; width: calc(100% - #{rem(20px)});}
 .notice-list li .txt p{margin-bottom: rem(3px); font-size: rem(16px);}
 .notice-list li .txt .new{display: inline-block; margin: rem(-2px) 0 0 rem(6px); width: rem(14px); height: rem(18px); background: url("../images/common/icon-new.svg") no-repeat center/contain;  vertical-align: middle;}
-.notice-list li .txt .date{display: inline-block; width: 100%; @include font('light', 14px); color: #666;}
+.notice-list li .txt .date{display: inline-block; width: 100%; @include font('spoqa-light', 14px); color: #666;}
 
 .management-list .tit{display: flex; align-items: center;}
 .management-list .tit img{width: rem(32px); height: rem(32px);}
 .management-list .tit .txt{margin-left: rem(16px);width: calc(100% - #{rem(68px)});}
 .management-list .tit .txt p{margin-bottom: rem(3px); font-size: rem(16px);}
-.management-list .tit .txt .date{@include font('light', 14px); color: #666;}
+.management-list .tit .txt .date{@include font('spoqa-light', 14px); color: #666;}
 .management-list .detail ul{margin: rem(-20px) 0;}
 .management-list .detail li{display: flex; align-items: center; padding: rem(16px) 0; border-bottom: 1px solid #eee;}
 .management-list .detail li:last-child{border-bottom: none;}
@@ -33,5 +33,5 @@
 
 .certify .brief{display: flex; align-items: center;}
 .certify .detail{display: none;}
-.certify .detail .chk span{@include font('regular', 14px);}
+.certify .detail .chk span{@include font('spoqa-regular', 14px);}
 .certify .detail .chk span::before{background-image: url("../images/common/icon-agree-unselect.svg");}

@@ -5,7 +5,7 @@
 table{
     caption{@include hidden;}
     th{
-        @include font-family('light');
+        @include font-family('spoqa-light');
         text-align: left;
     }
 }
@@ -37,7 +37,7 @@ table{
         border-top: 1px solid #e0e0e0;
         &.sub{border-top: none;}
 
-        em{@include font-family('medium');}
+        em{@include font-family('spoqa-medium');}
     }
     th, td{
         padding: rem(16px) rem(10px);

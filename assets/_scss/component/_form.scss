@@ -6,13 +6,13 @@ input{
         //padding: rem(10px) 0;
         width: 100%;
         height: rem(50px);
-        @include font('bold', 16px);
+        @include font('spoqa-bold', 16px);
         border-bottom: 1px solid #f4f4f4;
         box-sizing: border-box;
     }
 
     &::placeholder{
-        @include font-family('light');
+        @include font-family('spoqa-light');
         color: #c6c6c6;
     }
 
@@ -26,7 +26,7 @@ input{
     > ul > li + li {margin-top: rem(32px);}
 
     .tit{
-        @include font('medium', 13px);
+        @include font('spoqa-medium', 13px);
         .super{color: #f05d2b;}
     }
     .birth, .gender{display: inline-block; width: calc(50% - #{rem(8px)});}
@@ -46,7 +46,7 @@ input{
                 &:last-child{margin-right: 0;}
 
                 button{
-                    @include font-family('regular');
+                    @include font-family('spoqa-regular');
                     border: 1px solid #f8f8f8;
                     border-radius: rem(2px);
                 }
@@ -136,7 +136,7 @@ input{
             top: 50%;
             right: rem(4px);
             transform: translateY(-50%);
-            @include font('bold', 12px);
+            @include font('spoqa-bold', 12px);
             color: #fff;
             transition: 0.2s;
         }
@@ -191,7 +191,7 @@ label.chk{
     span{
         display: inline-flex;
         align-items: center;
-        @include font('medium', 16px);
+        @include font('spoqa-medium', 16px);
         letter-spacing: rem(-0.5px);
     }
 
@@ -238,7 +238,7 @@ label.chk{
 select{
     width: 100%;
     padding: rem(14px) rem(32px) rem(14px) rem(20px);
-    @include font('medium', 16px);
+    @include font('spoqa-medium', 16px);
     @include vendor-prefix(appearance, none);
     background: url("../images/common/icon-dropdown.svg") no-repeat right rem(20px) center/ rem(12px) rem(7px);
 
